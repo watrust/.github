@@ -8,3 +8,5 @@ If you are looking for in-depth information about our products and services you 
 
 ### Devs
 [README](https://github.com/watrust/README)
+
+[Build Status Board](https://github.com/watrust/build-status-page)
