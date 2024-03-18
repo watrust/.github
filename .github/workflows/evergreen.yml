@@ -14,6 +14,6 @@ jobs:
       - name: Run Evergreen
         uses: github/evergreen@v1
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.EVERGREEN_TOKEN }}
           ORGANIZATION: watrust
           DRY_RUN: ${{ inputs.dry_run }}
