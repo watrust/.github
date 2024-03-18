@@ -1,0 +1,19 @@
+name: Run Evergreen
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Run Evergreen in dry-run mode
+        type: boolean
+        required: true
+        default: true
+jobs:
+  evergreen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Evergreen
+        uses: github/evergreen@v1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ORGANIZATION: watrust
+          DRY_RUN: ${{ inputs.dry_run }}
